@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'devise-i18n'

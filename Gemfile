@@ -1,5 +1,11 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.2.0.2'
+gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"

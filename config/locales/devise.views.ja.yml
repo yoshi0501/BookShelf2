@@ -10,7 +10,6 @@ ja:
         remember_me: "ログインを記憶"
     models:
       user: "ユーザ"
-      name: "名前"
   devise:
     confirmations:
       new:

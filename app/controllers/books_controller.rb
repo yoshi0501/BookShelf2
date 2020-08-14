@@ -4,10 +4,14 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
     @books = Book.page params[:page]
+    @books = @books.search(s_title: params[:s_title], s_category: params[:s_category]) if params[:s_title].present? || params[:s_category].present?
   end
 
+  def my_books
+      @books = current_user.books.page params[:page]
+  end
+    
   # GET /books/1
   # GET /books/1.json
   def show
@@ -72,5 +76,4 @@ class BooksController < ApplicationController
     def book_params
       params.require(:book).permit(:title, :author, category_ids: [])
     end
-    
 end
